@@ -15,6 +15,7 @@ with open("input.txt") as f:
             parallel = True
             break
 
+
 with open("output.txt", "w") as f:
     if parallel:
         f.write("YES")
