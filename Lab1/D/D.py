@@ -16,6 +16,7 @@ with open("components.in") as f:
 
 visited = [0 for _ in range(n)]
 
+
 number = 0
 for i in range(n):
     if not visited[i]:
