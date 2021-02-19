@@ -21,3 +21,6 @@ for i in range(n):
     if not visited[i]:
         number += 1
         DFS(i, number)
+
+with open("components.out", "w") as f:
+    f.write(" ".join(map(str, visited)))
