@@ -1,8 +1,8 @@
-def DFS(index, number):
-    visited[index] = number
+def dfs(index, num):
+    visited[index] = num
     for i in range(n):
         if matrix[index][i] == 1 and not visited[i]:
-            DFS(i, number)
+            dfs(i, num)
 
 
 with open("components.in") as f:
@@ -15,13 +15,14 @@ with open("components.in") as f:
         matrix[b][e] = matrix[e][b] = 1
 
 visited = [0 for _ in range(n)]
-
-
+quantity = 0
 number = 0
 for i in range(n):
     if not visited[i]:
+        quantity += 1
         number += 1
-        DFS(i, number)
+        dfs(i, number)
 
 with open("components.out", "w") as f:
+    f.write(str(quantity) + '\n')
     f.write(" ".join(map(str, visited)))
