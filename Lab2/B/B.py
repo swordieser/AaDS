@@ -34,6 +34,9 @@ def main():
             if cycle:
                 break
 
+    path.append(path[0])
+    del path[0]
+
     with open("cycle.out", "w") as f:
         if cycle:
             f.write("YES\n")
