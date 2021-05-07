@@ -10,6 +10,7 @@ for w in weights:
         if backpack[i - w] == 1:
             backpack[i] = 1
 
+            
 with open("knapsack.out", "w") as f:
     for i in range(s, 0, -1):
         if backpack[i] == 1:
