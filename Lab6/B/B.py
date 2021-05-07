@@ -12,6 +12,7 @@ def z_function(string):
     return z_f
 
 
+
 def substring_search(text, pattern):
     n, m = len(text), len(pattern)
     answer = []
